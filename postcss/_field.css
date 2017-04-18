@@ -1,0 +1,17 @@
+.field-wr{
+  width: 300vw;
+  height: 300vh;
+  position: absolute;
+  z-index: 0;
+  top: -100vh;
+  left: -100vw;
+  perspective: 1200px;
+}
+.field{
+  width: 300vw;
+  height: 300vh;
+  background: radial-gradient(rgba(255,255,255,0.3) 2%, transparent 3%) 0 0, radial-gradient(rgba(255,255,255,0.3) 2%, transparent 3%) 32px 32px;
+  background-color: transparent;
+  background-size: 64px 64px;
+  transform: rotateX(40deg);
+}

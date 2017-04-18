@@ -1,0 +1,75 @@
+.social-links{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a {
+    text-align: center;
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255,255,255,0.3);
+    margin: 0 20px;
+    padding: 25px 20px;
+    color: #fff;
+    font-size: 3vh;
+  }
+  a::before,
+  a::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    content: '';
+    opacity: 0.5;
+    transition: opacity 0.3s, height 0.3s;
+  }
+  a::after {
+    top: 100%;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(-10px);
+  }
+  a span:first-child {
+    z-index: 2;
+    display: block;
+    font-weight: 300;
+  }
+  a span:last-child {
+    z-index: 1;
+    display: block;
+    padding: 8px 0 0 0;
+    text-shadow: none;
+    text-transform: none;
+    font-size: 3vh;
+    opacity: 0;
+    transition: transform 0.3s, opacity 0.3s;
+    transform: translateY(-100%);
+  }
+  a:hover::before,
+  a:focus::before {
+    height: 6px;
+  }
+  a:hover::before,
+  a:hover::after,
+  a:focus::before,
+  a:focus::after {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  a:hover span:last-child,
+  a:focus span:last-child {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  img{
+    height: 5vh;
+  }
+}
